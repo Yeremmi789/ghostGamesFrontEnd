@@ -1,0 +1,443 @@
+
+*{
+  font-family: sans-serif;
+}
+
+/* COMANDOS NUEVOS
+  background-repeat: no-repeat; Para que no se repita la imagen
+  background-attachment: fixed;  Para que la imagen se quede fija y siga la pantalla
+  filter: grayscale(100%); Para hacer que se vuelva en blanco y negro 
+
+  aplicar una transicion y hover para entender mejor
+  transform: translate3d(200px, 10%, 3em); 1.- mover verticalmente, 2.- mover horizontalmente, 3.- la profundidad que tomará (z-index)
+  transform: skewY(0.07rad); para inclinar los objetos verticalmente :0
+  transform: skewX(10deg); para que se incline horizontalmente
+  transform: rotate(0.5turn); rotar elementos :D
+  
+
+Recortes
+   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%); 
+   1.-quitar pedazo inclinacion  izquierda - derecha
+   2.- inclinacion arriba - izquierda
+   3.-quitar pedazo inclinacion  derecha - izquierda
+   4.- Altura 
+   5.-quitar pedazo inclinacion  abajo (derecha - izquierda)
+   6 NOSE 
+   7 NOSE 
+   8 NOSE 
+
+  clip-path: polygon(0% 0%, 100% 0%, 50% 50%);  ESTO ES UN TRIANGULO INVERTIDO
+
+
+*/
+
+.banner-container {
+  width: 100%;
+  height: 800px;
+  max-height: 800px;
+  background-image: url('/assets/Inicio/lol.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  color: #fff;
+
+  /* sombra en el lado inferior */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
+  
+  /* sombra en el lado inferior */
+  box-shadow: 20px 40px 60px rgba(255, 255, 255, 0.8); 
+z-index: 20px;
+}
+
+.banner-content{
+  width: 100%;
+  /* height: auto; */
+  height: 100%;
+  display: flex;
+  /* justify-content: center; */
+  justify-content: start;
+  /* background-color: rgba(0, 0, 0, 0.56); */
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+}
+
+.banner-text {
+  width: 30%;
+  height: 500px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* background-color: blue; */
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+
+  margin-left: 50px;
+}
+
+.banner-title{
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* justify-content: center; */
+}
+
+#banner-ghostgames{
+  font-size: 100px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+}
+
+.banner-description {
+  display: flex;
+  width: 100%;
+  height: auto;
+
+  
+}
+
+.banner-description p {
+  line-height: 1.5;
+}
+
+/* .banner-description p:hover {
+  transform: skewX(10deg);
+  transition: all 300ms;
+} */
+
+
+#banner-boton{
+  width: 300px;
+  height: auto;
+  padding: 10px 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  background-color: blueviolet;
+  border: 1px solid #fff;
+  /* background-color: transparent; */
+  color: #ffff;
+}
+
+
+#banner-boton:hover{
+  cursor: pointer;
+  border: 3px solid #fff;
+  /* transform: translate3d(10px, 50%, 0em); */
+  transition: all 300ms;
+  /* border-color: blue; */
+  /* transform: skewY(0.07rad); */
+  transform: skewX(10deg);
+  /* background-color: blueviolet; */
+  /* background-color: #10E3E5; */
+
+}
+
+.rotar-item:hover{
+  transform: rotate(0.5turn);
+  transition: all 300ms;
+}
+
+/* url('assets/imagenes/terror.jpg') */
+
+
+.titles-container {
+  background-color: #e1bcd2;
+  width: 100%;
+  display: flex;
+  height: auto;
+  /* background-color: #10E3E5; */
+  /* background-color: #321053; */
+  background-color: #191919;
+  justify-content: center;
+
+  z-index: 19px;
+
+}
+
+.cards-container{
+  display: flex;
+  width: 80%;
+  height: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 6%;
+}
+ 
+.cards-content{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+.cards-h1{
+  color: #ffff;
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+/* REVISAR Y ANALIZAR COMO SE HIZO ESTA ANIMACIÓN */
+.tarjeta{
+  display: flex;
+  width: 20%;
+  height: auto;
+  /* background-color: violet; */
+  flex-wrap: wrap;
+  /* border: 1px solid #ffff; */
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); */
+  border: 1px solid #343434;
+  box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.9);
+
+margin: 30px 20px;
+
+}
+
+.tarjeta:hover{
+  /* transform: translate3d(0px, -3%, 0em); */
+  /* transition: all 300ms; */
+  transition: all 1000ms;
+  cursor: pointer;
+  /* transform: translateY(-4px); */
+
+  transform: translateY(-5px) scale(1.05);
+  /* animation: rebotarxd 0.5s ease-in-out infinite; */
+  animation: rebotarxd 1s ease-in-out infinite;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+  border: 1px solid #ffff;
+}
+
+.tarjeta:active {
+  transform: translateY(0px) scale(1);
+}
+
+@keyframes rebotarxd {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.tarjeta div{
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.tarjeta-h1{
+  width: 100%;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  color: #10E3E5;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.tarjeta-imagen {
+  width: 150px; /* Ajusta este valor según el tamaño que desees */
+  height: 150px; /* Debe ser igual al ancho para mantener la forma circular */
+  object-fit: cover; /* Para asegurar que la imagen cubra todo el círculo sin distorsionarse */
+  border-radius: 50%; /* Hace que la imagen sea un círculo */
+  display: block; /* Asegura que la imagen se muestre como bloque y no tenga espacio extra debajo */
+  margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
+
+.tarjeta-p{
+  color: #fff;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+
+.header-container img {
+  /* clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%); */
+  /* clip-path: polygon(0% 0%, 100% 0%, 50% 50%);  */
+
+}
+
+
+.coleccion-m-container{
+  width: 100%;
+  background-color: #141414;
+  display: flex;
+  justify-content: center;
+}
+
+.coleccion-content{
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.coleccion-info{
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+#coleccion-h3{
+  width: 100%;
+  height: auto;
+  font-family: 'Oswald';
+  font-size: 20px;
+  /* color: rgb(168, 1, 1); */
+  color: #8A2BE2;
+  /* background-color: blue; */
+  display: flex;
+  align-items: end;
+  font-weight: 400;
+}
+#coleccion-h1{
+  width: 100%;
+  font-family: 'Oswald';
+  font-size: 42px;
+  /* font-weight: 400; */
+  color: #ffff;
+  height: 50px;
+  line-height: 1.2em;
+}
+#coleccion-p{
+  width: 100%;
+  color: #fff;
+  height: 20px;
+  /* font-family: 'Oswald'; */
+  font-weight: 200;
+}
+#coleccion-button{
+  width: 140px;
+  min-height: 50px;
+  max-height: 60px;
+  background-color: #8A2BE2;
+  border: 0 solid #0000;
+  color: #ffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  /* border-radius: 30px; */
+  font-weight: bold;
+  border: 1px solid #fff;
+}
+
+#coleccion-button:hover{
+  cursor: pointer;
+  border: 3px solid #fff;
+  /* transform: translate3d(10px, 50%, 0em); */
+  transition: all 300ms;
+  /* transform: skewY(0.07rad); */
+  /* background-color: transparent; */
+  transform: skewX(10deg);
+}
+
+.coleccion-card{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+/* Pruebas - Carrusel */
+
+/* .c-full{
+  width: 100%;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  background-color: #131312;
+}
+
+.c-medium{
+  width: 80%;
+  height:auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} */
+
+/* Cuerpo de la sección de productos */
+.c-titulo-productos{
+  display: inline-block;
+  width: 100%;
+  background-color: chocolate;
+  margin: 0 10px;
+
+  color: rgb(245, 245, 245);
+  font-size: 18px;
+  font-weight: 400px;
+  line-height: 25.2px;
+}
+
+.c-product{
+  width: 20%;
+  height: auto;
+  margin: 0 10px;
+}
+
+.c-product img {
+  width: 100%;
+  height: auto;
+}
+
+/* Contenedor de cada Producto */
+.info{
+  background-color: #131312;
+  color: #ffff;
+}
+
+.info p{
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.precios{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: chartreuse; */
+}
+
+.c-descuento{
+  /* background-color: blue; */
+  width: 50%;
+  display: flex;
+  align-items: center;
+  }
+
+.c-cantidad{
+    /* background-color: yellow; */
+    width: 50%;
+}
+
+.c-cantidad p{
+  font-size: 15px;
+  font-weight: 550;
+  display: flex;
+  justify-content: end;
+}
+
+/* .c-inline{
+  display: block;
+  width: 100%;
+  background-color: red;
+} */
+

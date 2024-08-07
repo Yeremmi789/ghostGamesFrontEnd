@@ -1,0 +1,31 @@
+<nav id="cont-master">
+  <div id="separador-nav">
+    <img src="./../../../assets/Logo0.png" alt="">
+    <p class="link-blanco" style="font-size: 30px; color: rgb(56, 56, 56);"> | </p>
+    <a class="link-blanco name_sitio" routerLink="">GhostGames</a>
+    <!-- <a class="link-blanco name_sitio" routerLink="">GhostGames</a> -->
+  </div>
+  <ul id="cont-ul">
+    <li><a class="link-blanco l_size1" routerLink="/inicio">Inicio</a></li>
+    <li><a class="link-blanco l_size1" href="/productos">Productos</a></li>
+    <!-- <li><a class="link-blanco l_size1" routerLink="/preview">Detalles</a></li> -->
+    <li><a class="link-blanco l_size1" href="">Galería</a></li>
+    <li><a class="link-blanco l_size1" href="">Soporte</a></li>
+
+  </ul>
+  <div class="cont-user">
+    <a href="/registro" id="foto-user" class="link-blanco"><img src="./../../../assets/userIcon.png" alt=""></a>
+  </div>
+</nav>
+
+<app-buscador *ngIf="mostrarBusquedaComponent"></app-buscador>
+
+<router-outlet></router-outlet>
+
+<!-- <app-producto-carousel></app-producto-carousel> -->
+
+
+<!-- <app-carousel-v1></app-carousel-v1> -->
+
+
+<app-footer></app-footer>

@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.name_sitio{
+  font-family: fantasy;
+  font-variant: small-caps;
+  font-size: 30px;
+}
+
+
+.link-blanco{
+  color: rgb(210, 210, 210);
+  font-weight: 500;
+}
+
+
+.tamanio-icon{
+  width: 10px;
+  height: auto;
+}
+
+
+.c-full {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #121313;
+}
+
+.c-medium {
+  width: 78.5%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* .mensaje_mouse{
+  position: relative;
+  color: #ffff;
+  top: 10px;
+  background-color: #202121;
+  padding: 10px 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 117, 229, 0.5);
+  z-index: 20;
+} */
+
+
+.click-message {
+  position: fixed; /* Posición fija para que esté siempre visible */
+  bottom: 20px; /* Ajusta la posición vertical del mensaje */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+
+/* FUENTES INSTALADAS*/
+
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/assets/fuentes/Oswald-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+}
