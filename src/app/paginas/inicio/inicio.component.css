@@ -278,6 +278,7 @@ margin: 30px 20px;
   height: auto;
   display: flex;
   justify-content: space-between;
+  margin: 50px 0;
 
 }
 
@@ -341,17 +342,176 @@ margin: 30px 20px;
   transform: skewX(10deg);
 }
 
-.coleccion-card{
-  display: flex;
+
+
+
+/* Pruebas carousel items PRUEBA*/
+
+.carrousel-container {
+  position: relative;
   width: 100%;
-  height: auto;
-  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.carousel-item {
+  /* min-width: calc(100% / 3); */
+  min-width: calc(100% / 3);
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Pruebas carousel items PRUEBA*/
+.carrusel-content{
+  position: relative;
+  /* width: 80%; */
+  width: 50%;
+  overflow: hidden;
+  margin: auto;
+  /* width: 100%; */
+}
+
+.carrusel-pagina{
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  /* background-color: #8A2BE2; */
+}
+
+.carrusel-juego {
+  display: flex;
+  margin: 0 20px; /* Margen más grande */
+  min-width: calc(100% / 3 - 40px); /* Resta el margen a la anchura de cada elemento */
   flex-wrap: wrap;
+}
+
+
+.imagen-juego{
+  width: 100%;
+  display: flex;
+  height: auto;
+}
+
+.img-juego{
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+.carrusel-flechas{
+  margin: 10px 0;
+}
+
+.icon-flecha-producto{
+  /* background-color: rgb(143, 143, 143); */
+  border-radius: 40px;
+  font-size: 20px;
+  color: #ffff;
+  height: 20px;
+}
+
+.btn-flechas{
+  background: #202121; /* Fondo transparente */
+  backdrop-filter: blur(5px); /* Desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* Desenfoque para Safari */
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  border: 1px solid #202121;
+  margin: 5px 0px;
+  margin-right: 10px;
+
+}
+
+.btn-flechas:hover{
+  background: rgba(249, 249, 249, 0.794); /* Fondo transparente */
+  cursor: pointer;
+  border: 1px solid #ffff;
+}
+
+
+.categoria-juego{
+  color: #777677; 
+  font-size: 9px;
+  line-height: 15px;
+  font-weight: 800;
+}
+
+.info-juego {
+  background-color: #131312;
+  color: #ffff;
+}
+
+.info-juego p {
+  padding-top: 10px;
+  font-family: sans-serif;
+  line-height: 20px;
+}
+
+.full{
+  width: 100%;
 }
 
 
 
 
+.experiencia-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 200px 0;
+  background-color: #191919;
+}
+
+.experiencia-content{
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.experiencia-item{
+  width: 30%;
+  height: auto;
+  margin: 30px auto 50px auto;
+  /* background-color: red; */
+}
+
+.exp-item{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.exp-titulo{
+  font-size: 22px;
+  margin: 45px 0;
+
+  font-family: 'Oswald', sans-serif;
+  color: #ffff;
+}
+
+.exp-icono{
+  width: 60px;
+}
+
+.exp-descripcion{
+  line-height: 1.5em;
+  text-align: center;
+  color: #ffff;
+}
 
 
 /* Pruebas - Carrusel */
@@ -441,3 +601,25 @@ margin: 30px 20px;
   background-color: red;
 } */
 
+/* Animación Linea izquierda a derecha  */
+
+
+.hover-line {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffff; /* Color de la línea */
+  transition: width 0.3s ease-in-out;
+}
+
+.hover-line:hover::after {
+  width: 100%; /* Expande la línea a lo largo del elemento */
+}
