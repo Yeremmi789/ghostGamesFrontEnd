@@ -237,7 +237,10 @@ margin: 30px 20px;
   text-align: center;
   font-family: 'Oswald', sans-serif;
   color: #fff;
-  color: #10E3E5;
+  /* color: #10E3E5; */
+  color: #8A2BE2;
+  font-weight: 500;
+
   /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
 }
@@ -513,24 +516,117 @@ margin: 30px 20px;
   color: #ffff;
 }
 
+.tarjetaJuego-cont{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;  
+  background-color: #191919;
+
+  padding: 100px 0;
+}
+.tarjuego-cont{
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: blueviolet; */
+  flex-wrap: wrap;
+}
+.tarj-item{
+  width: 31%;
+  /* height: auto; */
+  display: flex;
+  flex-wrap: wrap;
+
+  height: 400px;
+  overflow: hidden;
+
+  margin: 30px 0;
+}
+.tarj-imagen {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Ajusta según sea necesario */
+  overflow: hidden;
+  z-index: 5;
+  transform: translateY(0) scale(1);
+  transition: all 900ms ease;
+
+}
+
+.tarj-img:hover{
+  transform: translateY(-5px) scale(1.2);
+  transition: all 900ms ease;
+}
+
+
+
+.tarj-label {
+  position: absolute;
+  bottom: 0; /* Coloca el label en la parte inferior */
+  left: 0;
+  right: 0;
+  /* background-color: rgba(255, 165, 0, 0.8); */
+  background-color: #892be2fd; /* Fondo semitransparente */
+  color: #fff;
+  font-size: 25px;
+  padding: 10px 15px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  /* width: 130px; */
+  width: 80px;
+  /* border: 1px solid #ffff; */
+  z-index: 10;
+}
+
+
+.tarj-img {
+  /* width: 100%;
+  height: 100%; */
+  width: 100%;
+  /* width: 600px; */
+  height: 300px;
+  
+  object-fit: cover;
+  object-position: center;
+}
+
+.tarj-info{
+  width: 100%;
+  display: flex;
+  height: 100px;
+  background-color: black;
+  flex-wrap: wrap;
+}
+
+#tarj-titulo{
+  color: #ffff;
+  width: 100%;
+  font-size: 18px;
+  height: 50%;
+  /* background-color: blue; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding-left: 30px;
+}
+
+#tarj-descripcion{
+  color: #ffff;
+  width: 100%;
+  font-size: 14px;
+  height: 50%;
+  /* background-color: green; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding-left: 30px;
+
+}
 
 /* Pruebas - Carrusel */
 
-/* .c-full{
-  width: 100%;
-  height:auto;
-  display: flex;
-  justify-content: center;
-  background-color: #131312;
-}
-
-.c-medium{
-  width: 80%;
-  height:auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-} */
 
 /* Cuerpo de la sección de productos */
 .c-titulo-productos{
@@ -595,11 +691,7 @@ margin: 30px 20px;
   justify-content: end;
 }
 
-/* .c-inline{
-  display: block;
-  width: 100%;
-  background-color: red;
-} */
+
 
 /* Animación Linea izquierda a derecha  */
 
