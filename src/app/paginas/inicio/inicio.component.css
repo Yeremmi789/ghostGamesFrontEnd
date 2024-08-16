@@ -391,9 +391,10 @@ margin: 30px 20px;
 
 .carrusel-juego {
   display: flex;
-  margin: 0 20px; /* Margen más grande */
-  min-width: calc(100% / 3 - 40px); /* Resta el margen a la anchura de cada elemento */
-  flex-wrap: wrap;
+  flex-direction: column; /* Coloca la imagen y la info en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin: 0 20px; /* Margen entre elementos */
+  min-width: calc(100% / 3 - 40px); /* Ajuste del ancho */
 }
 
 
@@ -558,6 +559,7 @@ margin: 30px 20px;
 .tarj-img:hover{
   transform: translateY(-5px) scale(1.2);
   transition: all 900ms ease;
+  cursor: pointer;
 }
 
 

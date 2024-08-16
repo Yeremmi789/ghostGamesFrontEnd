@@ -30,18 +30,7 @@ export class ProductoCarouselComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.calculateCarouselWidth();
-    this.calculateCarouselWidth_v2();
-  }
 
-  calculateCarouselWidth() {
-    const productWidth = 198 + 20; // Ancho del producto + márgenes
-    this.carouselWidth = this.products.length * productWidth;
-  }
-
-  calculateCarouselWidth_v2() {
-    const productWidth = 198 + 20; // Ancho del producto + márgenes
-    this.carouselWidth_v2 = this.products_v2.length * productWidth;
   }
 
   hoveredProduct: any; // Propiedad para almacenar el producto sobre el cual está el mouse
@@ -185,34 +174,53 @@ export class ProductoCarouselComponent implements OnInit{
   ];
 
 
-  currentIndex = 0;
-  translateX = 0;
-  carouselWidth = 0;
+  
+  paginaIndex = 0;
+  ultimaPagina = Math.floor(this.products.length / 6);
+
+  private recidirRedondear(cantidad: number) {
+    let numeroExtraido: number;
+    numeroExtraido = cantidad - Math.trunc(cantidad);
+    // this.ultimaPagina = this.products.length / 6;
+
+    // alert("cantidad: " + cantidad + " y decimal es: " +numeroExtraido)
+    if (numeroExtraido > 0.1) {
+      this.ultimaPagina = cantidad - 1;
+      // this.ultimaPagina = Math.floor(this.products_v2.length / 6) - 1;
+      // alert("Entonces el redondeo es: " + this.ultimaPagina)
+  } else {
+    // alert("Entonces el redondeo es: " + this.ultimaPagina)
+        this.ultimaPagina = cantidad - 1;
+  }
+
+    return this.ultimaPagina;
+}
+
+  
+
 
 
   prev() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-      this.updateTranslateX();
+    if(this.paginaIndex > 0){
+      this.paginaIndex--;
     }
   }
 
   next() {
-    if (this.currentIndex < this.products.length - 1) {
-    // if (this.currentIndex < this.products.length) {
-      this.currentIndex++;
-      this.updateTranslateX();
+    // if(this.paginaIndex < this.products.length / 6){
+    //   this.paginaIndex++;
+    // }
+
+    const cantidadDecimal = this.products.length / 6;
+    this.recidirRedondear(cantidadDecimal);
+
+    // Tu lógica actual de next_v2 aquí
+    if (this.paginaIndex < this.ultimaPagina) {
+        this.paginaIndex++;
     }
   }
 
-  updateTranslateX() {
-    // this.translateX = -this.currentIndex * 213; // 400 (ancho del item) + 20 (márgenes)
-    this.translateX = -this.currentIndex * (213 * 5); // 400 (ancho del item) + 20 (márgenes)
-  }
-
-  //2do Carousel
-
-
+  
 
   products_v2 = [
     {
@@ -282,33 +290,131 @@ export class ProductoCarouselComponent implements OnInit{
       discountedPrice: '219.80'
     },
 
+    {
+      id:17,
+      name: 'Gas Station Simulator',
+      description: 'Descripción del Producto 1',
+      image: 'https://cdn1.epicgames.com/spt-assets/e48463d2c1fc4e17a3860fbbc8e54edc/gas-station-simulator-6na58.jpg?h=480&quality=medium&resize=1&w=360',
+      category: 'Juego base',
+      title: 'Grand Theft Auto V: Premium Edition',
+      discount: '-50 %',
+      originalPrice: '143,99',
+      discountedPrice: '179,99'
+    },
+    {
+      id:18,
+      name: 'Shadow of the Tomb Raider: Definitive Edition',
+      description: 'Descripción del Producto 1',
+      image: 'https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de?h=480&quality=medium&resize=1&w=360',
+      category: 'Juego base',
+      title: 'Grand Theft Auto V: Premium Edition',
+      discount: '-50 %',
+      originalPrice: '599',
+      discountedPrice: '219.80'
+    },
+    {
+      id:11,
+      name: 'The Callisto Protocol',
+      description: 'Descripción del Producto 1',
+      image: 'https://cdn1.epicgames.com/offer/6b0541b5d9aa476cbf407643ab3b1d7d/EGS_TheCallistoProtocol_StrikingDistanceStudios_S2_1200x1600-1e31eacc92833279f5b7a8d07cd3826c?h=480&quality=medium&resize=1&w=360',
+      category: 'Juego base',
+      title: 'Grand Theft Auto V: Premium Edition',
+      discount: '-70 %',
+      originalPrice: '300',
+      discountedPrice: '1200'
+    },
+    {
+      id:12,
+      name: 'Fallout: New Vegas',
+      description: 'Descripción del Producto 1',
+      image: 'https://cdn1.epicgames.com/offer/3428aaab2c674c98b3acb789dcfaa548/EGS_FalloutNewVegas_ObsidianEntertainment_S2_1200x1600-866fe8b8f56e2e7bb862c49bf0627b9a?h=480&quality=medium&resize=1&w=360',
+      category: 'Juego base',
+      title: 'Grand Theft Auto V: Premium Edition',
+      discount: '-50 %',
+      originalPrice: '44,75',
+      discountedPrice: '179'
+    },
+    {
+      id:13,
+      name: 'Shadow of the Tomb Raider: Definitive Edition',
+      description: 'Descripción del Producto 1',
+      image: 'https://cdn1.epicgames.com/offer/4b5461ca8d1c488787b5200b420de066/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-s4-1200x1600-7ee40d6fa744_1200x1600-950cdb624cc75d04fe3c8c0b62ce98de?h=480&quality=medium&resize=1&w=360',
+      category: 'Juego base',
+      title: 'Grand Theft Auto V: Premium Edition',
+      discount: '-50 %',
+      originalPrice: '599',
+      discountedPrice: '219.80'
+    },
+    {
+      id:14,
+      name: 'Mount & Blade II: Bannerlord',
+      description: 'Descripción del Producto 1',
+      image: 'https://cdn1.epicgames.com/offer/aeac94c7a11048758064b82f8f8d20ed/EGS_MountBladeIIBannerlord_TaleWorldsEntertainment_S2_1200x1600-67b826955ba37d7d6c33ec578aaa2d54?h=480&quality=medium&resize=1&w=360',
+      category: 'Juego base',
+      title: 'Grand Theft Auto V: Premium Edition',
+      discount: '-80 %',
+      originalPrice: '499,99',
+      discountedPrice: '899,99'
+    },
+    
+
     // Añadir más productos según sea necesario
   ];
 
 
-  currentIndex_v2 = 0;
-  translateX_v2 = 0;
-  carouselWidth_v2 = 0;
+  paginaIndex2 = 0;
+  ultimaPagina2 = Math.floor(this.products_v2.length / 6);
+  // ultimaPagina2 = Math.ceil(this.products_v2.length / 6) - 1;
+
+  // math.ceil = para redondear hacia arriba 4.6 = 5
+  // math.floor = para redondear hacia abajo 4.6 = 4
+
+  // ultimaPagina2:number = 0; // ó ultimaPagina2 = 0
+
+  
+  private recidirRedondear2(cantidad: number) {
+    let numeroExtraido: number;
+    numeroExtraido = cantidad - Math.trunc(cantidad);
+    // this.ultimaPagina2 = this.products_v2.length / 6;
+
+    // alert("cantidad: " + cantidad + "y decimal es: " +numeroExtraido)
+
+    if (numeroExtraido > 0.1) {
+        this.ultimaPagina2 = cantidad - 1;
+    } else {
+        this.ultimaPagina2 = cantidad - 1;
+    }
+
+    return this.ultimaPagina2;
+}
+
+
 
   prev_v2() {
-    if (this.currentIndex_v2 > 0) {
-      this.currentIndex_v2--;
-      this.updateTranslateX_v2();
+    if(this.paginaIndex2 > 0){
+      this.paginaIndex2--;
     }
+    // alert("Resultado: " + this.ultimaPagina2);
+
   }
 
   next_v2() {
-    if (this.currentIndex_v2 < this.products_v2.length - 1) {
-      this.currentIndex_v2++;
-      this.updateTranslateX_v2();
+
+    // if(this.paginaIndex2 < this.products_v2.length / 6){
+    //   this.paginaIndex2++;
+    // }
+
+
+    const cantidadDecimal = this.products_v2.length / 6;
+    this.recidirRedondear2(cantidadDecimal);
+
+    // Tu lógica actual de next_v2 aquí
+    if (this.paginaIndex2 < this.ultimaPagina2) {
+        this.paginaIndex2++;
     }
   }
 
-  updateTranslateX_v2() {
-    // this.translateX_v2 = -this.currentIndex_v2 * 213;
-    this.translateX = -this.currentIndex * (213 * 5); // 400 (ancho del item) + 20 (márgenes)
-  }
-
+ 
 
 
 
