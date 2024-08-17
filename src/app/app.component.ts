@@ -79,7 +79,7 @@ export class AppComponent implements OnInit{
 
   verif_rutaActual() { //#2
     const actualURL = this.ruta.url;
-    this.mostrarBusquedaComponent = !['/registro','/login','/inicio'].includes(actualURL);
+    this.mostrarBusquedaComponent = !['/registro','/login','/inicio','/contacto'].includes(actualURL);
     console.log(actualURL); // esto imprime toda la ruta actual, sin tomar encuenta "localhost:4200 ó el servidor"
     // console.log( this.mostrarBusquedaComponent);
   }

@@ -11,6 +11,7 @@ import { LoginComponent } from './paginas/login/login.component';
 import { CategoriasComponent } from './paginas/categorias/categorias.component';
 import { VistaCategoriaComponent } from './paginas/vista-categoria/vista-categoria.component';
 import { NotasPendientesComponent } from './interfaces/notas-pendientes/notas-pendientes.component';
+import { ContactoComponent } from './paginas/contacto/contacto.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
       }
     ]
   },
+  {path: 'contacto', component: ContactoComponent, title: 'Contactame :D'},
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: '**', redirectTo: '/inicio' } // Ruta de fallback
 ];
