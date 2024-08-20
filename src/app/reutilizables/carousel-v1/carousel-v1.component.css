@@ -34,7 +34,7 @@
 
 .prev-button {
   left: 0;
-  z-index: 100;
+  z-index: 25;
 }
 
 .next-button {

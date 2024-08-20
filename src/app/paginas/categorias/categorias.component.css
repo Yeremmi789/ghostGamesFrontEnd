@@ -39,7 +39,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    background-color: #272727;
+    /* background-color: #272727; */
     padding:25px;
     padding-top:80px;
 }
@@ -164,3 +164,34 @@
 .image-container:hover .overlay {
     opacity: 1;
 } */
+
+
+@media screen and (max-width: 600px) {
+    .c-medium{
+        width: 100%;
+    }
+
+    .c-titulo{
+
+    }
+
+    .c-categorias{
+    padding:0;
+
+    }
+    
+    .c-tipo{
+        width: 45%;
+    }
+
+    .c-categoria-imagen{
+        height: 300px;
+    }
+    
+
+    .c-categoria-imagen img{
+        object-position: center;
+    }
+    
+
+}

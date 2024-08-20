@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { CommonModule, NgClass, NgFor, NgIf, NgStyle } from '@angular/common';  // Importar CommonModule
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,6 +23,54 @@ import { LocalstorageBasicService } from '../../servicios/localstorage-basic.ser
 })
 export class ProductoCarouselComponent implements OnInit{
 
+  esMobile: boolean = false;
+  ultimaPagina:number = 0;
+  ultimaPagina2:number = 0;
+  cantidadDecimal:number = 0;
+  cantidadDecimal2:number = 0;
+  
+
+
+  // Listener para detectar cambios en el tamaño de la ventana
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkDeviceType();
+  } 
+
+  // Método para verificar el tipo de dispositivo
+  checkDeviceType() {
+    this.esMobile = window.innerWidth <= 768;
+    if (this.esMobile) {
+      this.applyMobileLogic();
+    } else {
+      this.applyDesktopLogic();
+    }
+  }
+
+   // Lógica específica para dispositivos móviles
+   applyMobileLogic() {
+    console.log('Aplicando lógica para dispositivos móviles');
+    this.ultimaPagina = Math.floor(this.products.length / 3);
+    this.ultimaPagina2 = Math.floor(this.products_v2.length / 3);
+    // Aquí va tu lógica específica para móviles
+    this.cantidadDecimal = this.products.length / 3;
+    this.cantidadDecimal2 = this.products_v2.length / 3;
+  }
+  
+  // Lógica específica para dispositivos de escritorio
+  applyDesktopLogic() {
+    console.log('Aplicando lógica para dispositivos de escritorio');
+    // Aquí va tu lógica específica para escritorio
+    
+    this.ultimaPagina = Math.floor(this.products.length / 6);
+    this.ultimaPagina2 = Math.floor(this.products_v2.length / 6);
+    this.cantidadDecimal = this.products.length / 6;
+    this.cantidadDecimal2 = this.products_v2.length / 6;
+  }
+
+
+
+
   constructor(
     private router:Router,
     private localStorage:LocalstorageBasicService
@@ -30,7 +78,7 @@ export class ProductoCarouselComponent implements OnInit{
   }
 
   ngOnInit() {
-
+    this.checkDeviceType(); // Verifica el tipo de dispositivo al cargar la página
   }
 
   hoveredProduct: any; // Propiedad para almacenar el producto sobre el cual está el mouse
@@ -176,20 +224,13 @@ export class ProductoCarouselComponent implements OnInit{
 
   
   paginaIndex = 0;
-  ultimaPagina = Math.floor(this.products.length / 6);
-
+  // ultimaPagina = Math.floor(this.products.length / 3);
   private recidirRedondear(cantidad: number) {
     let numeroExtraido: number;
     numeroExtraido = cantidad - Math.trunc(cantidad);
-    // this.ultimaPagina = this.products.length / 6;
-
-    // alert("cantidad: " + cantidad + " y decimal es: " +numeroExtraido)
     if (numeroExtraido > 0.1) {
       this.ultimaPagina = cantidad - 1;
-      // this.ultimaPagina = Math.floor(this.products_v2.length / 6) - 1;
-      // alert("Entonces el redondeo es: " + this.ultimaPagina)
   } else {
-    // alert("Entonces el redondeo es: " + this.ultimaPagina)
         this.ultimaPagina = cantidad - 1;
   }
 
@@ -211,8 +252,8 @@ export class ProductoCarouselComponent implements OnInit{
     //   this.paginaIndex++;
     // }
 
-    const cantidadDecimal = this.products.length / 6;
-    this.recidirRedondear(cantidadDecimal);
+    // const cantidadDecimal = this.products.length / 6;
+    this.recidirRedondear(this.cantidadDecimal);
 
     // Tu lógica actual de next_v2 aquí
     if (this.paginaIndex < this.ultimaPagina) {
@@ -363,21 +404,10 @@ export class ProductoCarouselComponent implements OnInit{
 
 
   paginaIndex2 = 0;
-  ultimaPagina2 = Math.floor(this.products_v2.length / 6);
-  // ultimaPagina2 = Math.ceil(this.products_v2.length / 6) - 1;
-
-  // math.ceil = para redondear hacia arriba 4.6 = 5
-  // math.floor = para redondear hacia abajo 4.6 = 4
-
-  // ultimaPagina2:number = 0; // ó ultimaPagina2 = 0
-
-  
+  // ultimaPagina2 = Math.floor(this.products_v2.length / 3);
   private recidirRedondear2(cantidad: number) {
     let numeroExtraido: number;
     numeroExtraido = cantidad - Math.trunc(cantidad);
-    // this.ultimaPagina2 = this.products_v2.length / 6;
-
-    // alert("cantidad: " + cantidad + "y decimal es: " +numeroExtraido)
 
     if (numeroExtraido > 0.1) {
         this.ultimaPagina2 = cantidad - 1;
@@ -398,15 +428,12 @@ export class ProductoCarouselComponent implements OnInit{
 
   }
 
+
   next_v2() {
 
-    // if(this.paginaIndex2 < this.products_v2.length / 6){
-    //   this.paginaIndex2++;
-    // }
 
-
-    const cantidadDecimal = this.products_v2.length / 6;
-    this.recidirRedondear2(cantidadDecimal);
+    // const cantidadDecimal = this.products_v2.length / 6;
+    this.recidirRedondear2(this.cantidadDecimal2);
 
     // Tu lógica actual de next_v2 aquí
     if (this.paginaIndex2 < this.ultimaPagina2) {

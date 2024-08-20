@@ -35,18 +35,13 @@ Recortes
   width: 100%;
   height: 800px;
   max-height: 800px;
-  background-image: url('/assets/Inicio/lol.jpg');
+  background-image: url('/assets/Inicio/lol.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; 
   color: #fff;
-
-  /* sombra en el lado inferior */
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
-  
-  /* sombra en el lado inferior */
   box-shadow: 20px 40px 60px rgba(255, 255, 255, 0.8); 
-z-index: 20px;
+  z-index: 20px;
 }
 
 .banner-content{
@@ -281,7 +276,9 @@ margin: 30px 20px;
   height: auto;
   display: flex;
   justify-content: space-between;
-  margin: 50px 0;
+  /* margin: 50px 0; */
+  /* margin: 14% 0; */
+  margin: 10% 0;
 
 }
 
@@ -311,11 +308,11 @@ margin: 30px 20px;
   font-size: 42px;
   /* font-weight: 400; */
   color: #ffff;
-  height: 50px;
-  line-height: 1.2em;
+  /* line-height: 1.2em; */
+  max-height: 20px;
 }
 #coleccion-p{
-  width: 100%;
+  /* width: 100%; */
   color: #fff;
   height: 20px;
   /* font-family: 'Oswald'; */
@@ -364,7 +361,6 @@ margin: 30px 20px;
 }
 
 .carousel-item {
-  /* min-width: calc(100% / 3); */
   min-width: calc(100% / 3);
   box-sizing: border-box;
   padding: 20px;
@@ -376,8 +372,8 @@ margin: 30px 20px;
 /* Pruebas carousel items PRUEBA*/
 .carrusel-content{
   position: relative;
-  /* width: 80%; */
-  width: 50%;
+  /* width: 50%; */
+  width: 60%;
   overflow: hidden;
   margin: auto;
   /* width: 100%; */
@@ -473,7 +469,7 @@ margin: 30px 20px;
   height: auto;
   display: flex;
   justify-content: center;
-  padding: 200px 0;
+  /* padding: 200px 0; */
   background-color: #191919;
 }
 
@@ -483,6 +479,8 @@ margin: 30px 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 14% 0;
+  /* background-color: red; */
 }
 
 .experiencia-item{
@@ -490,6 +488,12 @@ margin: 30px 20px;
   height: auto;
   margin: 30px auto 50px auto;
   /* background-color: red; */
+  /* background-color: violet; */
+  width: 20%;
+  margin: 30px 1% 50px 1%;
+  background-color: #212121;
+  padding: 30px 50px;
+  border-radius: 5px;
 }
 
 .exp-item{
@@ -501,7 +505,7 @@ margin: 30px 20px;
 
 .exp-titulo{
   font-size: 22px;
-  margin: 45px 0;
+  margin: 35px 0;
 
   font-family: 'Oswald', sans-serif;
   color: #ffff;
@@ -515,6 +519,14 @@ margin: 30px 20px;
   line-height: 1.5em;
   text-align: center;
   color: #ffff;
+}
+
+
+
+.iconos_ghost{
+  width: 90px;
+  height: 90px;
+  fill: #15F7FC;
 }
 
 .tarjetaJuego-cont{
@@ -716,4 +728,226 @@ margin: 30px 20px;
 
 .hover-line:hover::after {
   width: 100%; /* Expande la línea a lo largo del elemento */
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .banner-container {
+    height: 600px; /* Reduce la altura en pantallas medianas */
+    width: 100%;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner-container {
+    height: 400px; /* Reduce la altura en pantallas pequeñas */
+    height: 100vh; /* Altura de la ventana visible */
+    height: 120vh;
+    height: 1440px;
+  background-attachment: unset; 
+
+  }
+
+  .banner-content{
+
+  }
+
+  .banner-text{
+    width: 100%;
+    font-size: 20px;
+    height: auto;
+    margin: 0;
+    padding: 0 20px;
+    justify-content: center;
+  }
+
+  .banner-title{
+    margin: 30px 0;
+    justify-content: center;
+  }
+  .banner-description{
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  #banner-ghostgames{
+    font-size: 70px;
+    text-align: center;
+  }
+
+  .tarjetaJuego-cont{
+    padding: 100px 0;
+
+  }
+
+  .tarjuego-cont{
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: blueviolet; */
+    flex-wrap: wrap;
+  }
+
+  .tarj-item{
+    width: 100%;
+    width: 50%;
+    height: 400px;
+    height: 200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+  }
+
+  .tarj-imagen {
+    position: relative;
+    width: 100%;
+    height: 150px;
+  }
+
+  .tarj-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    transition: all 900ms ease;
+  }
+
+  .tarj-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #892be2fd;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 7.5px;
+    min-width: 21%;
+  }
+
+  .tarj-info{
+    width: 100%;
+    display: flex;
+    height: 50px;
+    background-color: black;
+  }
+
+  #tarj-titulo{
+    color: #ffff;
+    font-size: 12px;
+    display: flex;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 0px;
+    margin: 0;
+    /* background-color: red; */
+    height: 15px;
+
+  }
+  
+  #tarj-descripcion{
+    font-size: 12px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+  }
+
+
+  /* Sección Colección de juegos */
+
+
+  .coleccion-content{
+    flex-wrap: wrap;
+
+}
+
+  .coleccion-info{
+    width: 100%;
+    /* background-color: red; */
+    height: 300px;
+    
+  }
+
+  #coleccion-h3{
+    width: 100%;
+    /* background-color: green; */
+  }
+    
+  #coleccion-h1{
+    width: 100%;
+    /* background-color: blue; */
+    font-size: 35px;
+    /* text-align: center; */
+  max-height: 20px;
+  }
+
+#coleccion-p{
+  /* background-color: orange; */
+  margin: 10px 0 30px 0;
+
+}
+
+  .carrusel-content{
+    width: 100%;
+
+  }
+
+  #coleccion-button{
+    /* width: 100%;
+    height: auto; */
+    margin: 10px 0;
+  }
+
+  .carrusel-juego {
+    margin: 0 5px;    
+    min-width: calc(100% / 3 - 10px); /* Ajuste del ancho */
+  }
+
+  .carrusel-flechas{
+    display: flex;
+    justify-content: end;
+  }
+
+  
+/* Experiencias del sitio para el usuario */
+
+.experiencia-content{
+  width: 100%;
+}
+
+.experiencia-item{
+  margin: 0;
+}
+
+.experiencia-item{
+  width: 48%;
+  margin: 50px 1% 0 1%;
+}
+
+.exp-item{
+  width: 100%;
+
+}
+
+.exp-titulo{
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+
+}
+
+.exp-descripcion{
+  font-size: 13px;
+}
+
+
+.iconos_ghost{
+  width: 50px;
+  height: 50px;
+  fill: #15F7FC;
+}
+
+
 }

@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .name_sitio{
   font-family: fantasy;
   font-variant: small-caps;
@@ -72,4 +76,13 @@
   font-family: 'Oswald';
   src: url('/assets/fuentes/Oswald-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
+}
+
+
+/* responsivo */
+
+@media screen and (max-width: 400px) {
+  
+  
+
 }

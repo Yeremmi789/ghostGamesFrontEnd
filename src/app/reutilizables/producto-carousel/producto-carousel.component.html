@@ -1,7 +1,7 @@
 
 
 <!-- <div class="c-full">
-  <div class="c-medium">
+  <div class="c-medium-carrusel">
     <div class="c-titulo-productos">
       <div style="display: flex; justify-content: space-between;">
         <div>
@@ -56,14 +56,14 @@
 
 
 <div class="c-full">
-  <div class="c-medium">
+  <div class="c-medium-carrusel">
     <div class="c-titulo-productos">
-      <div style="display: flex; justify-content: space-between;">
-        <div>
+      <div class="encabezado-carrusel">
+        <div class="div-encabezado-carrusel">
           <a class="link_t_productoV1" style="letter-spacing: 1px; display: inline;">{{destacadosTitulo}}</a>
           <i class="bi bi-chevron-right"></i>
         </div>
-        <div>
+        <div class="div-flechas-carrusel">
           <button (click)="prev()" [disabled]="paginaIndex === 0"  type="button" class="btn-flechas">
             <i class="bi bi-chevron-compact-left icon-flecha-producto"></i>
           </button>
@@ -85,7 +85,7 @@
           <a href="" style="z-index: 20;">Añadir</a>
           <div class="c-p-img" [ngClass]="{ 'hovered': product === hoveredProduct }">
             <div class="div-img">
-              <img style="height: 240px;" [src]="product.image" [alt]="product.name" />
+              <img class="img-juego-carrusel" [src]="product.image" [alt]="product.name" />
             </div>
 
           </div>
@@ -94,7 +94,7 @@
             <p style="font-size: 14px;">{{ product.name }}</p>
             <div class="precios">
               <div class="c-descuento">
-                <p style="background-color: #0075e5; font-size: 10px; padding: 6px; border-radius: 4px; font-weight: 700;">{{ product.discount }}</p>
+                <p class="p-descuento" >{{ product.discount }}</p>
               </div>
               <div class="c-cantidad">
                 <p style=" color: #777677; line-height: 15px; text-decoration: line-through;">{{ product.originalPrice }} MXN</p>
@@ -111,9 +111,9 @@
 
 
 <!-- <div class="c-full">
-  <div class="c-medium">
+  <div class="c-medium-carrusel">
     <div class="c-titulo-productos">
-      <div style="display: flex; justify-content: space-between;">
+      <div class="encabezado-carrusel">
         <div>
           <a class="link_t_productoV1" style="letter-spacing: 0.5px; font-weight: 300; display: inline;">{{destacadosTitulo2}}</a>
           <i class="bi bi-chevron-right"></i>
@@ -161,14 +161,14 @@
 
 
 <div class="c-full">
-  <div class="c-medium">
+  <div class="c-medium-carrusel">
     <div class="c-titulo-productos">
-      <div style="display: flex; justify-content: space-between;">
-        <div>
+      <div class="encabezado-carrusel">
+        <div class="div-encabezado-carrusel">
           <a class="link_t_productoV1" style="letter-spacing: 1px; display: inline;">{{destacadosTitulo}}</a>
           <i class="bi bi-chevron-right"></i>
         </div>
-        <div>
+        <div class="div-flechas-carrusel">
           <button (click)="prev_v2()" [disabled]="paginaIndex2 === 0"  type="button" class="btn-flechas">
             <i class="bi bi-chevron-compact-left icon-flecha-producto"></i>
           </button>
@@ -190,7 +190,7 @@
           <a href="" style="z-index: 20;">Añadir</a>
           <div class="c-p-img" [ngClass]="{ 'hovered': product_v2 === hoveredProduct }">
             <div class="div-img">
-              <img style="height: 240px;" [src]="product_v2.image" [alt]="product_v2.name" />
+              <img class="img-juego-carrusel" [src]="product_v2.image" [alt]="product_v2.name" />
             </div>
 
           </div>
@@ -199,7 +199,8 @@
             <p style="font-size: 14px;">{{ product_v2.name }}</p>
             <div class="precios">
               <div class="c-descuento">
-                <p style="background-color: #0075e5; font-size: 10px; padding: 6px; border-radius: 4px; font-weight: 700;">{{ product_v2.discount }}</p>
+                <p class="p-descuento" >{{ product_v2.discount }}</p>
+
               </div>
               <div class="c-cantidad">
                 <p style=" color: #777677; line-height: 15px; text-decoration: line-through;">{{ product_v2.originalPrice }} MXN</p>
@@ -222,9 +223,9 @@
 <!-- Carousel antes de los  ID -->
 
 <!-- <div class="c-full">
-  <div class="c-medium">
+  <div class="c-medium-carrusel">
     <div class="c-titulo-productos">
-      <div style="display: flex; justify-content: space-between;">
+      <div class="encabezado-carrusel">
         <div>
           <a href="" class="link_t_productoV1" style="letter-spacing: 1px; display: inline;">Destacados de las SUPEROFERTAS</a>
           <i class="bi bi-chevron-right"></i>
