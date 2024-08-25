@@ -24,7 +24,7 @@
               "src/favicon.ico",
               "src/assets",
               
-              "src/_todasLasRutasProduccion"
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.css",
