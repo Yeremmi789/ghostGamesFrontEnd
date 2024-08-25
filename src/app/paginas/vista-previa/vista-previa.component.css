@@ -18,6 +18,18 @@
   flex-direction: column;
 } */
 
+.detalles-container{
+
+}
+
+.detalles-content{
+  width: 77%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
 .tituloProducto{
   color: #ffff;
   margin-top: 30px;
@@ -28,6 +40,12 @@
   color: #ffff;
   display: flex;
   width: 100%;
+
+}
+
+#estrellas-movil{
+  display: none;
+
 }
 
 .c-categoria p {
@@ -45,11 +63,17 @@
 
 .c-imgDescripcion{
   /* background-color: red; */
+  display: flex;
   width: 62%;
+  width: 100%;
   height: auto;
-  margin-right: 6%;
+  /* margin-right: 6%; */
+
 }
 
+.c-imagenes{
+  width: 62%;
+}
 
 .c-imagenes img{
   /* width: 475px; */
@@ -61,7 +85,7 @@
   /* background-color: chocolate; */
   width: 32%;
   height: auto;
-  /* margin-left: 10%; */
+  margin-left: 10%;
   padding-top: 62px;
 }
 
@@ -71,11 +95,17 @@
   /* background-color: chocolate; */
   width: 100%;
   height: 180px;
+  max-height: 180px;
 }
 
 .logoJuego img{
-  width: 85%;
-  height: 55%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+  /* width: auto;
+  height: auto; */
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
 }
 
 
@@ -83,6 +113,7 @@
   padding: 60px 0;
   color: #ffff;
   font-size: 16px;
+  width: 60%;
 }
 
 .c-descripcion p{
@@ -342,54 +373,91 @@
     font-size: 20px;
 }
 
-@media (max-width: 1330px) {
-    .product-images img {
-        max-width: 450px;
-        margin-bottom: 10px;
-    }
-}
-@media (max-width: 1240px) {
-    .product-images img {
-        max-width: 400px;
-        margin-bottom: 10px;
-    }
-}
 
-@media (max-width: 1210px) {
-    .cont-hijo{
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-    }
-    .product-images{
-        display: flex;
-        justify-content: center;
+
+@media (max-width: 600px){
+
+    .c-full{
+
     }
 
-    .product-images img{
-        max-width: 300px;
-        margin-bottom: 10px;
+    .c-medium{
+      width: 10%;
     }
 
-    .tituloResponsivo{
-        visibility: visible;
-        padding: 20px 0 20px 10px;
-    }
-    .titulo{
-        visibility: hidden;
+  .detalles-content{
+    width: 95%;
+  }
+
+    .tituloProducto{
+      font-size: 15px;
     }
 
-    .product-price {
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        padding-top: 10px;
+    .c-categoria{
+      margin: 30px 0 0 0;
     }
 
 
-}
+    .c-categoria p {
+      margin-right: 0;
+      padding: 20px 0;
+    }
 
-@media (max-width: 380px){
+
+    #estrellas-pc{
+      display: none;
+    }
+
+    #estrellas-movil{
+      display: block;
+      width: 20%;
+      /* background-color: blueviolet; */
+      text-align: center;
+    }
+    
+    #experiencia-juego{
+      width: 40%;
+      /* background-color: blue; */
+      text-align: center;
+    }
+    
+    #nivel-juego{
+      /* background-color: red; */
+      width: 40%;
+      text-align: center;
+    }
+
+    .c-juego{
+      width: 100%;
+    }
+
+    
+    .c-imgDescripcion{
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-right: 0;
+
+    }
+
+    .c-imagenes{
+      width: 100%;
+    }
+
+    .c-info{
+      width: 100%;
+      margin: 0;
+    }
+
+    
+
+    .logoJuego img{
+      width: 80%;
+      /* height: auto; */
+      /* object-fit: cover; */
+      object-position: center;
+    }
+    
 
     .btnResponsivo{
         display: block;
@@ -408,4 +476,11 @@
         width: 40%;
         font-size: 15px;
     }
+
+
+    .c-descripcion{
+      width: 95%;
+    }
+
+
 }

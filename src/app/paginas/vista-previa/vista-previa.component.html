@@ -1,12 +1,13 @@
-<div class="c-full" [style.background-color]="colorFondos">
+<!-- <div class="c-full" [style.background-color]="colorFondos">
   <div class="c-medium">
     <div class="tituloProducto">
       <h1>{{productoSeleccionado.name}}</h1>
     </div>
     <div class="c-categoria">
-      <p>⭐⭐⭐⭐⭐</p>
-      <p>Buenas batallas contra jefes</p>
-      <p>Ideal para principiantes</p>
+      <p id="estrellas-movil">⭐x5</p>
+      <p id="estrellas-pc">⭐⭐⭐⭐⭐</p>
+      <p id="experiencia-juego">Buenas batallas contra jefes</p>
+      <p id="nivel-juego">Ideal para principiantes</p>
     </div>
     <div class="c-juego">
       <div class="c-imgDescripcion">
@@ -29,9 +30,6 @@
 
       <div class="c-info" style="position: sticky; top: 0;">
         <div class="logoJuego" >
-          <!-- <img
-            src="https://cdn2.unrealengine.com/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-ic1-400x400-1a101c6adcf1-400x132-564f4e1cc624.png?h=270&quality=medium&resize=1&w=480"
-            alt=""> -->
           <img
             src="{{productoSeleccionado.logoJuego}}">
         </div>
@@ -64,9 +62,81 @@
 
     </div>
   </div>
+</div> -->
+
+<div class="c-full" [style.background-color]="colorFondos">
+  <div class="detalles-content">
+    <div class="tituloProducto">
+      <h1>{{productoSeleccionado.name}}</h1>
+    </div>
+    <div class="c-categoria">
+      <p id="estrellas-movil">⭐x5</p>
+      <p id="estrellas-pc">⭐⭐⭐⭐⭐</p>
+      <p id="experiencia-juego">Buenas batallas contra jefes</p>
+      <p id="nivel-juego">Ideal para principiantes</p>
+    </div>
+    <div class="c-juego">
+      <div class="c-imgDescripcion">
+        <div class="c-imagenes">
+           <app-juego-carousel></app-juego-carousel>
+        </div>
+        <div class="c-info" style="position: sticky; top: 0;">
+          <div class="logoJuego" >
+            <img
+              src="{{productoSeleccionado.logoJuego}}">
+          </div>
+  
+          <div class="precioJuego">
+            <p class="etiquetaBase">JUEGO BASE</p>
+  
+            <div style="display: flex;">
+              <p class="c-descuento">{{productoSeleccionado.discount}}</p>
+              <p style="text-decoration: line-through; color: #8a9a9c;">{{productoSeleccionado.discountedPrice}}</p>
+              <p>208 MXN</p>
+            </div>
+            <p style="font-size: 12px;">La oferta finaliza el 27/06/2024 a las 9:00</p>
+            <button class="btn-compras btn-comprar" type="button" >COMPRAR AHORA</button>
+            <button class="btn-compras btn-addCarrito" type="button" >AÑADIR AL CARRITO</button>
+            <button class="btn-compras btn-addDeseos" type="button"><i style="font-size: 18px;" class="bi bi-plus-circle"></i> A LA LISTA DE DESEOS</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="c-descripcion">
+
+        <p>En Shadow of the Tomb Raider: Definitive Edition, vive el capítulo final de la historia sobre el origen de Lara, en el que se convierte en la saqueadora de tumbas que está destinada a ser.</p>
+
+
+        <p>
+          Shadow of the Tomb Raider: Definitive Edition
+          Mientras Lara Croft trata de salvar el mundo de un apocalipsis maya, deberá convertirse en la saqueadora de tumbas que está destinada a ser.
+          En Shadow of the Tomb Raider: Definitive Edition, vive el capítulo final de la historia sobre el origen de Lara, en el que se convierte en la saqueadora de tumbas que está destinada a ser. Esta edición incluye el juego básico y siete tumbas de desafío de contenido descargable, así como armas, atuendos y habilidades descargables. Shadow of the Tomb Raider: Definitive Edition es la opción definitiva para vivir el momento que marcó la vida de Lara.
+        </p>
+      </div>
+
+    </div>
+
+
+    
+  </div>
 </div>
 
-<div class="cont-padre">
+
+<!-- Pruebas de typescript y comentarios :D -->
+
+<!-- <div class="c-valoracion" style="padding-top: 50px;">
+      <h1>Seccion de pruebas Dinamicas con TypeScript :D</h1>
+      <div #elementoContenedorDinamico class="mi-clase-css">
+      </div>
+
+      <button (click)="agregarElemento('Elemento 1')">Agregar elemento</button>
+      <button (click)="agregarElemento('Elemento 2')">Agregar otro elemento</button>
+    </div> -->
+
+
+
+<!-- <div class="cont-padre">
   <div class="contenedor">
       <hr>
       <div class="product-reviews">
@@ -104,70 +174,6 @@
 
           </div>
       </div>
-  </div>
-</div>
-
-
-
-
-
-<!-- <div class="c-full">
-  <div class="c-medium">
-    <div class="tituloProducto">
-      <h1>Shadow of the Tomb Raider: Definitive Edition</h1>
-    </div>
-    <div class="c-categoria">
-      <p>⭐⭐⭐⭐⭐</p>
-      <p>Buenas batallas contra jefes</p>
-      <p>Ideal para principiantes</p>
-    </div>
-    <div class="c-juego">
-      <div class="c-imgDescripcion">
-        <div class="c-imagenes">
-           <app-juego-carousel></app-juego-carousel>
-        </div>
-        <div class="c-descripcion">
-
-          <p>En Shadow of the Tomb Raider: Definitive Edition, vive el capítulo final de la historia sobre el origen de Lara, en el que se convierte en la saqueadora de tumbas que está destinada a ser.</p>
-
-
-          <p>
-            Shadow of the Tomb Raider: Definitive Edition
-            Mientras Lara Croft trata de salvar el mundo de un apocalipsis maya, deberá convertirse en la saqueadora de tumbas que está destinada a ser.
-            En Shadow of the Tomb Raider: Definitive Edition, vive el capítulo final de la historia sobre el origen de Lara, en el que se convierte en la saqueadora de tumbas que está destinada a ser. Esta edición incluye el juego básico y siete tumbas de desafío de contenido descargable, así como armas, atuendos y habilidades descargables. Shadow of the Tomb Raider: Definitive Edition es la opción definitiva para vivir el momento que marcó la vida de Lara.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="c-info" style="position: sticky; top: 0;">
-        <div class="logoJuego" >
-          <img
-            src="https://cdn2.unrealengine.com/egs-shadowofthetombraiderdefinitiveedition-eidosmontralcrystaldynamicsnixxessoftware-ic1-400x400-1a101c6adcf1-400x132-564f4e1cc624.png?h=270&quality=medium&resize=1&w=480"
-            alt="">
-        </div>
-
-        <div class="precioJuego">
-          <p class="etiquetaBase">JUEGO BASE</p>
-
-          <div style="display: flex;">
-            <p class="c-descuento">-75%</p>
-            <p style="text-decoration: line-through; color: #8a9a9c;">832 MXN</p>
-            <p>208 MXN</p>
-          </div>
-          <p style="font-size: 12px;">La oferta finaliza el 27/06/2024 a las 9:00</p>
-          <button class="btn-compras btn-comprar" type="button" >COMPRAR AHORA</button>
-          <button class="btn-compras btn-addCarrito" type="button" >AÑADIR AL CARRITO</button>
-          <button class="btn-compras btn-addDeseos" type="button"><i style="font-size: 18px;" class="bi bi-plus-circle"></i> A LA LISTA DE DESEOS</button>
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="c-valoracion">
-
-    </div>
   </div>
 </div> -->
 

@@ -159,3 +159,18 @@ body {
   display: flex;
   justify-content: center;
 }
+
+
+@media (max-width: 800px){
+  body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+  background-position: center;
+  }
+
+  .c-medios{
+    width: 90%;
+  }
+
+}
