@@ -23,8 +23,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              
-              "src/app",
               "src/_redirects"
             ],
             "styles": [

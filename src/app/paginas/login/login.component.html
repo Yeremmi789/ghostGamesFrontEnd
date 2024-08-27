@@ -1,4 +1,4 @@
-<body>
+<div class="body">
   <div class="c-completo">
     <div class="c-medios">
 
@@ -23,6 +23,12 @@
           <label for="">Contraseña</label>
           <input type="password" placeholder="Contraseña1" name="contraseña1" id="contraseña1">
           <br>
+          <div style="display: flex; width: 100%; align-items: center;">
+            <button id="btnVerPassword" type="button" (click)="verPassword()">
+              <i [ngClass]="mostrarPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+            </button>
+          </div>
+
         </div>
         <!-- <div class="cont-nieto">
           <label for="">Verificar contraseña</label>
@@ -40,4 +46,4 @@
     </div>
   </div>
 
-</body>
+</div>

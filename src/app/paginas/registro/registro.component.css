@@ -1,5 +1,5 @@
 
-body {
+.body {
   background-image: url(/assets/fondo5.jpg);
   background-size: 100%;
   margin: 0;
@@ -100,6 +100,8 @@ body {
   outline: 0px;
 }
 
+
+
 #c-btnSubmit{
   padding-bottom: 30px;
 }
@@ -115,9 +117,27 @@ body {
   background-color: #9742e7;
   width: 90%;
   color: #fff;
-
-
 }
+
+#btnVerPassword{
+  margin-top: 20px;
+  padding-left: 0px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background-color: transparent;
+  width: 15%;
+  font-size: 20px;
+  text-align: center;
+  /* position: absolute; */
+  /* right: 32%; */
+}
+
+.password-toggle-text{
+  color: #ffff;
+  font-size: 15px;
+  padding-top: 15px;
+}
+
 
 .cont-nieto small {
   visibility: hidden;
@@ -159,9 +179,24 @@ body {
   justify-content: center;
 }
 
+/* Mensajes de validación */
+.i_invalido{
+  color: rgb(255, 0, 0);
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.i_valido{
+  color: greenyellow;
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+}
+
 
 @media (max-width: 800px){
-  body{
+  .body{
     background-repeat: no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
@@ -175,6 +210,7 @@ body {
 
   .cont-nieto input {
     width: 100%;
+    padding: 0 20px;
   }
 
 
