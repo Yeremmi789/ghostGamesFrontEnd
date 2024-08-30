@@ -119,7 +119,7 @@ agregarElemento(textoElemento: string) {
       originalPrice: '599',
       discountedPrice: '219.80',
       logoJuego: 'assets/carousel-juegos/Logos/gtaLogo.avif',
-      colorFondo: '#007006'
+      colorFondo: '#456F19'
     },
     {
       id: 4,
@@ -132,7 +132,7 @@ agregarElemento(textoElemento: string) {
       originalPrice: '599',
       discountedPrice: '219.80',
       logoJuego: 'assets/carousel-juegos/Logos/hLogo.avif',
-      colorFondo: 'green'
+      colorFondo: '#082d31'
     },
     {
       id: 5,
@@ -145,7 +145,7 @@ agregarElemento(textoElemento: string) {
       originalPrice: '599',
       discountedPrice: '219.80',
       logoJuego: 'assets/carousel-juegos/Logos/as1Logo.webp',
-      colorFondo: 'red'
+      colorFondo: '#000000'
     },
 
 
@@ -188,7 +188,7 @@ agregarElemento(textoElemento: string) {
       originalPrice: '599',
       discountedPrice: '219.80',
       logoJuego: 'assets/carousel-juegos/Logos/gtaLogo.avif',
-      colorFondo: 'blue'
+      colorFondo: '#456F19'
     },
     {
       id: 9,
@@ -201,7 +201,7 @@ agregarElemento(textoElemento: string) {
       originalPrice: '599',
       discountedPrice: '219.80',
       logoJuego: 'assets/carousel-juegos/Logos/hLogo.avif',
-      colorFondo: 'green'
+      colorFondo: '#082d31'
     },
     {
       id: 10,
@@ -250,7 +250,8 @@ agregarElemento(textoElemento: string) {
       discount: '-50 %',
       originalPrice: '599',
       logoJuego: 'assets/carousel-juegos/Logos/TomLogo.avif',
-      discountedPrice: '219.80'
+      discountedPrice: '219.80',
+      colorFondo: '#082d31'
     },
     {
       id:14,
