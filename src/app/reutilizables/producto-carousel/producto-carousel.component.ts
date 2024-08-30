@@ -166,9 +166,10 @@ export class ProductoCarouselComponent implements OnInit{
 
     {
       id: 6,
-      name: 'EA SPORTS FC™ 24 Standard Edition',
+      name: 'Dead By Daylight',
       description: 'Descripción del Producto 1',
-      image: 'https://cdn1.epicgames.com/offer/4750c68b2bfa4f43933b81cfd5cc510c/EGS_EASPORTSFC24StandardEdition_EACanada_S2_1200x1600-5ecbb77fd9c0601ef34c4a988120fc42?h=480&quality=medium&resize=1&w=360',
+      // image: 'https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-a1c30209e3b9fb63144daa9b5670f503?h=480&quality=medium&resize=1&w=360',
+      image: 'assets/carousel-juegos/dbd_Portada.avif',
       category: 'JUEGO BASE',
       title: 'Grand Theft Auto V: Premium Edition',
       discount: '-50 %',
@@ -210,9 +211,10 @@ export class ProductoCarouselComponent implements OnInit{
     },
     {
       id: 10,
-      name: "Assasin's Creed  Mirage",
+      name: 'Dead By Daylight',
       description: 'Descripción del Producto 1',
-      image: 'https://cdn1.epicgames.com/offer/9bcf5a4dc1d54cb6ab1a42f3a70c5cf4/Carousel_BoxArt_1200x1600_1200x1600-38bda67bb1290f58e8a18ddc38a3c0ec?h=480&quality=medium&resize=1&w=360',
+      // image: 'https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-a1c30209e3b9fb63144daa9b5670f503?h=480&quality=medium&resize=1&w=360',
+      image: 'assets/carousel-juegos/dbd_Portada.avif',
       category: 'JUEGO BASE',
       title: 'Grand Theft Auto V: Premium Edition',
       discount: '-50 %',

@@ -19,7 +19,7 @@
 } */
 
 .detalles-container{
-
+  /* background-color: #007006; */
 }
 
 .detalles-content{
@@ -144,7 +144,8 @@
 
 
 .c-descuento{
-  background-color: blue;
+  /* background-color: blue; */
+  background-color: #39a0a2;
   color: #ffff;
   font-size: 12px;
   width: 55px;
@@ -166,6 +167,7 @@
   height: 50px;
   border-radius: 5px;
   background-color: #c74127;
+  background-color: blueviolet;
 }
 
 

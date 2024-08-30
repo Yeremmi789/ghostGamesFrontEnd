@@ -82,7 +82,7 @@
 
       <div class="carousel" [style.transform]="'translateX('+ -paginaIndex * 100 + '%)'">
         <a  (click)="detalle_Producto(product.id)" class="carrusel-juego" *ngFor="let product of products" (mouseenter)="onMouseEnter(product)" (mouseleave)="onMouseLeave()">
-          <a href="" style="z-index: 20;">Añadir</a>
+          <!-- <a href="" style="z-index: 20;">Añadir</a> -->
           <div class="c-p-img" [ngClass]="{ 'hovered': product === hoveredProduct }">
             <div class="div-img">
               <img class="img-juego-carrusel" [src]="product.image" [alt]="product.name" />
@@ -187,7 +187,7 @@
 
       <div class="carousel" [style.transform]="'translateX('+ -paginaIndex2 * 100 + '%)'">
         <a  (click)="detalle_Producto(product_v2.id)" class="carrusel-juego" *ngFor="let product_v2 of products_v2" (mouseenter)="onMouseEnter(product_v2)" (mouseleave)="onMouseLeave()">
-          <a href="" style="z-index: 20;">Añadir</a>
+          <!-- <a href="" style="z-index: 20;">Añadir</a> -->
           <div class="c-p-img" [ngClass]="{ 'hovered': product_v2 === hoveredProduct }">
             <div class="div-img">
               <img class="img-juego-carrusel" [src]="product_v2.image" [alt]="product_v2.name" />
